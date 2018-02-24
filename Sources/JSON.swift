@@ -16,6 +16,8 @@ public enum JSON {
     case double(Double)
     /// A case for denoting an integer with an associated value of `Swift.Int`.
     case int(Int)
+    /// A case for denoting an integer with an associated value of `Swift.UInt`.
+    case uint(UInt)
     /// A case for denoting a string with an associated value of `Swift.String`.
     case string(String)
     /// A case for denoting a boolean with an associated value of `Swift.Bool`.
@@ -90,6 +92,7 @@ extension JSON: CustomStringConvertible {
         case .string(let string):   return string
         case .double(let double):   return String(describing: double)
         case .int(let int):         return String(describing: int)
+        case .uint(let uint):       return String(describing: uint)
         case .bool(let bool):       return String(describing: bool)
         case .null:                 return "null"
         }

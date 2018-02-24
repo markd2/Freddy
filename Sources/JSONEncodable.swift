@@ -50,6 +50,14 @@ extension Int: JSONEncodable {
     }
 }
 
+extension UInt: JSONEncodable {
+    /// Converts an instance of a conforming type to `JSON`.
+    /// - returns: An instance of `JSON` where the enum case is `.uint`.
+    public func toJSON() -> JSON {
+        return .uint(self)
+    }
+}
+
 extension Double: JSONEncodable {
     /// Converts an instance of a conforming type to `JSON`.
     /// - returns: An instance of `JSON` where the enum case is `.double`.

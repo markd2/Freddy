@@ -164,6 +164,15 @@ extension JSON {
         return try Int(json: value(at: path))
     }
 
+    /// Retrieves a `UInt` from a path into JSON.
+    /// - parameter path: 0 or more `String` or `UInt` that subscript the `JSON`
+    /// - returns: A numeric `UInt`
+    /// - throws: One of the `JSON.Error` cases thrown by `decode(at:type:)`.
+    /// - seealso: `JSON.decode(at:type:)`
+    public func getUInt(at path: JSONPathType...) throws -> UInt {
+        return try UInt(json: value(at: path))
+    }
+
     /// Retrieves a `String` from a path into JSON.
     /// - parameter path: 0 or more `String` or `Int` that subscript the `JSON`
     /// - returns: A textual `String`
