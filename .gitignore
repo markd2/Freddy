@@ -38,3 +38,12 @@ Carthage/Build
 report.xml
 fastlane/test_output
 fastlane/build_output
+
+## Bork
+
+oopack
+
+# emacs droppings
+*~
+\#*
+.\#*
